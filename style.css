@@ -1,24 +1,37 @@
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #1c1c1c;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #262523;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
   color: white;
-  padding: 20px;
+  margin: 0;
+  padding: 0 20px;
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
 }
 header {
   text-align: center;
-  margin-bottom: 40px;
+  padding: 20px;
+}
+.logo {
+  width: 200px;
 }
 nav ul {
   list-style: none;
-  padding: 0;
   display: flex;
   justify-content: center;
-  background-color: #000;
-  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.3); /* semitransparente */
+  backdrop-filter: blur(4px); /* desenfoque suave */
+  border-radius: 8px;
+  padding: 10px 0;
+  margin: 10px auto;
+  max-width: 90%;
+  gap: 12px;
 }
 nav ul li {
-  margin: 0 15px;
+  margin: 0 18px;
+  display: inline-block;
 }
 nav ul li a {
   color: #F2C94C;
@@ -29,25 +42,262 @@ h1 {
   color: #F2C94C;
 }
 h2 {
-  color: white;
   border-bottom: 2px solid #F2C94C;
+  padding-bottom: 5px;
 }
-section {
-  margin-bottom: 40px;
+ul {
+  padding-left: 20px;
 }
-a {
-  color: #F2C94C;
-  text-decoration: none;
+img {
+  width: 100%;
+  max-width: 700px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 10px;
 }
 button {
-  border: none;
   background-color: #F2C94C;
   color: black;
   padding: 10px 20px;
   font-size: 16px;
+  border: none;
+  margin-top: 10px;
   cursor: pointer;
 }
-img {
-  margin-top: 10px;
+a {
+  color: #F2C94C;
+}
+.menu-img {
+  width: 45%;
+  max-width: 400px;
+  margin: 10px;
+  border-radius: 12px;
+  display: inline-block;
+}
+#galeria img {
+  width: 30%;
+  max-width: 300px;
+  margin: 10px;
+  border-radius: 12px;
+  display: inline-block;
+}
+.galeria-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.galeria-grid img {
+  width: 30%;
+  max-width: 300px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.reserva-btn {
+  background-color: #facc15;
+  color: black;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reserva-btn:hover {
+  background-color: #eab308;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animado-logo {
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.animado-frase {
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+nav ul li a {
+  color: #F2C94C;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #F2C94C;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
   border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+/* ----- SEPARACIÓN ENTRE APARTADOS ----- */
+section {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+/* ----- RESPONSIVE PARA MÓVILES ----- */
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px;
+    font-size: 16px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .menu-img {
+    width: 90%;
+    max-width: none;
+  }
+
+  #galeria img {
+    width: 90%;
+    max-width: none;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .reserva-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+section {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.mapa-contenedor {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  border: 4px solid #F2C94C;
+  border-radius: 12px;
+  overflow: hidden;
+}
+#horario {
+  margin-top: 60px;
+  padding-bottom: 40px;
+}
+
+#horario h2 {
+  text-align: left;
+}
+
+.texto-horario {
+  font-size: 18px;
+  margin-top: 10px;
+  line-height: 1.6;
+  text-align: left;
+}
+section::before {
+  content: "";
+  display: block;
+  height: 100px; /* altura del espacio que queremos dejar */
+  margin-top: -100px; /* el negativo para compensar */
+  visibility: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+footer {
+  background-color: #1e1e1e;
+  color: #F2C94C;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 14px;
+  border-top: 2px solid #F2C94C;
+}
+
+.redes-sociales {
+  margin-top: 10px;
+}
+
+.redes-sociales a {
+  color: #F2C94C;
+  font-size: 22px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+  color: white;
 }
