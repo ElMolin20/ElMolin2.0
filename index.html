@@ -23,12 +23,16 @@
 </footer>
 <!-- Botón de subir hacia arriba -->
 <button id="btnSubir" title="Volver arriba">⬆️</button>
-
-<script>
+  <script>
   const btnSubir = document.getElementById("btnSubir");
+
   window.addEventListener("scroll", () => {
     btnSubir.style.display = window.scrollY > 200 ? "block" : "none";
   });
+
+  function subirArriba() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 </script>
 <body>
   <header>
