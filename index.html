@@ -1,70 +1,187 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>El Molín 2.0</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Fuente Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- AOS Animaciones -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Iconos Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+  <footer>
+  <p>&copy; 2025 El Molín 2.0 | Todos los derechos reservados</p>
+  <div class="redes-sociales">
+    <a href="https://instagram.com/elmolin2.0" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://facebook.com/elmolin2.0" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  </div>
+</footer>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#carta">Carta</a></li>
-        <li><a href="#vinos">Vinos</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-    <img src="logo.png" alt="El Molín 2.0" style="width: 200px;">
-    <h1>Con nombre moderno, pero el alma de siempre.</h1>
+    <img src="logo.jpeg" alt="Logo El Molín 2.0" class="logo animado-logo" data-aos="fade-down">
+    <h1 class="animado-frase" data-aos="fade-up">Con nombre moderno, pero el alma de siempre.</h1>
   </header>
 
+  <nav>
+    <ul>
+      <li><a href="#ofrecemos">Qué ofrecemos</a></li>
+      <li><a href="#reservas">Reservas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#horario">Horario</a></li>
+      <li><a href="#mapa">Mapa</a></li>
+      <li><a href="#eventos">Eventos</a></li>
+      <li><a href="#carta">Carta</a></li>
+      <li><a href="#vinos">Vinos</a></li>
+      <li><a href="#galeria">Galería</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <section id="inicio">
-      <h2>¿Qué ofrecemos en El Molín 2.0?</h2>
+    <section id="ofrecemos" data-aos="fade-up">
+      <h2>¿Qué ofrecemos?</h2>
       <ul>
         <li>🚗 Parking privado</li>
-        <li>🍻 Zona de bar</li>
+        <li>🍻 Zona bar</li>
         <li>🍽️ Comedor principal</li>
         <li>🎉 Comedor de eventos</li>
         <li>🌞 Varias terrazas</li>
         <li>🎪 Carpa con zona de juegos para niños</li>
-        <li>🌿 Amplio terreno al aire libre</li>
+        <li>🌿 Amplio terreno con porterías</li>
       </ul>
     </section>
 
-    <section id="carta">
+    <section id="reservas" data-aos="fade-right">
+      <h2>📅 Reservas</h2>
+      <p>Haz tu reserva de forma rápida y sencilla:</p>
+      <a href="https://wa.me/34667696002?text=Hola%2C%20quiero%20reservar%20en%20El%20Mol%C3%ADn%202.0%20para..." target="_blank">
+        <button class="reserva-btn">Reservar por WhatsApp</button>
+      </a>
+      <p style="margin-top: 10px;">También puedes llamarnos: <strong>984 569 122</strong> o <strong>667 696 002</strong></p>
+    </section>
+
+    <section id="contacto" data-aos="fade-left">
+  <h2>📞 Contacto</h2>
+  <p>📍 Valle de Cuna y Cenera — MI-4, 3 – 33615 Mieres, Asturias</p>
+  <p>📞 Teléfono fijo: 984 569 122</p>
+  <p>📱 WhatsApp: 667 696 002</p>
+  <p>📧 Correo: <a href="mailto:elmolin2.0res@gmail.com">elmolin2.0res@gmail.com</a></p>
+  <p>
+    <a href="https://instagram.com/elmolin2.0" target="_blank" style="display:inline-flex; align-items:center; gap:8px; text-decoration:none;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#F2C94C" viewBox="0 0 24 24">
+        <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.3 2.3.5.6.2 1 .5 1.4 1 .4.4.7.9 1 1.4.2.4.4 1.1.5 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.9-.5 2.3-.2.6-.5 1-1 1.4-.4.4-.9.7-1.4 1-.4.2-1.1.4-2.3.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.3-2.3-.5-.6-.2-1-.5-1.4-1-.4-.4-.7-.9-1-1.4-.2-.4-.4-1.1-.5-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.9.5-2.3.2-.6.5-1 1-1.4.4-.4.9-.7 1.4-1 .4-.2 1.1-.4 2.3-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.4 0-4.6.1-1 .1-1.5.2-1.8.4-.5.2-.9.5-1.2.8s-.6.7-.8 1.2c-.2.3-.3.8-.4 1.8-.1 1.1-.1 1.4-.1 4.6s0 3.4.1 4.6c.1 1 .2 1.5.4 1.8.2.5.5.9.8 1.2s.7.6 1.2.8c.3.2.8.3 1.8.4 1.1.1 1.4.1 4.6.1s3.4 0 4.6-.1c1-.1 1.5-.2 1.8-.4.5-.2.9-.5 1.2-.8s.6-.7.8-1.2c.2-.3.3-.8.4-1.8.1-1.1.1-1.4.1-4.6s0-3.4-.1-4.6c-.1-1-.2-1.5-.4-1.8-.2-.5-.5-.9-.8-1.2s-.7-.6-1.2-.8c-.3-.2-.8-.3-1.8-.4-1.1-.1-1.4-.1-4.6-.1zm0 3.7a5.1 5.1 0 1 1 0 10.2 5.1 5.1 0 0 1 0-10.2zm0 8.4a3.3 3.3 0 1 0 0-6.6 3.3 3.3 0 0 0 0 6.6zm5.4-9.1a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/>
+      </svg>
+      @elmolin2.0
+    </a>
+  </p>
+  <p>
+    <a href="https://www.facebook.com/elmolin2.0" target="_blank" style="display:inline-flex; align-items:center; gap:8px; text-decoration:none;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#F2C94C" viewBox="0 0 24 24">
+        <path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 4.8 3.4 8.7 7.9 9.8v-6.9H7.4v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.5.8-1.5 1.6v1.9h2.6l-.4 2.9h-2.2v6.9C18.6 20.7 22 16.8 22 12z"/>
+      </svg>
+      @elmolin2.0
+    </a>
+  </p>
+</section>
+    
+    <section id="horario" data-aos="fade-up">
+  <h2>🕒 Nuestro horario</h2>
+  <p class="texto-horario">
+    Lunes: <strong>Cerrado por descanso</strong><br>
+    De martes a domingo: <strong>Abierto a partir de las 12:00 h</strong>
+  </p>
+</section>
+
+<section id="mapa" data-aos="fade-up">
+  <h2>📍 Mapa</h2>
+  <div class="mapa-contenedor">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.4177735830945!2d-5.79901439999998!3d43.22169979999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd36f6d8af313835%3A0x7b23eb0cdbd4f69a!2sEl%20Mol%C3%ADn%202.0!5e0!3m2!1ses!2ses!4v1750035002588!5m2!1ses!2ses"
+      width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+    
+  <section id="eventos" data-aos="fade-up">
+  <h2>🎉 Eventos</h2>
+  <p>En El Molín 2.0 realizamos todo tipo de eventos personalizados:</p>
+  <ul>
+    <li>💍 Bodas</li>
+    <li>👶 Bautizos</li>
+    <li>🎂 Cumpleaños</li>
+    <li>⛪ Comuniones</li>
+    <li>🍻 Espichas</li>
+  </ul>
+  <p>Contacta con nosotros para organizar una celebración inolvidable en un entorno único.</p>
+</section>
+
+    <section id="carta" data-aos="fade-up">
       <h2>🍽️ Carta de comida</h2>
-      <p><strong>Entrantes:</strong> Ensalada de la casa, Croquetas caseras, Cecina de León</p>
-      <p><strong>Carnes:</strong> Cachopo, Entrecot, Chuletón</p>
-      <p><strong>Pescados:</strong> Merluza a la sidra, Bacalao al horno</p>
-      <p><strong>Platos de cuchara:</strong> Fabada asturiana, Pote</p>
-      <p><strong>Postres:</strong> Arroz con leche, Tarta de queso</p>
+      <img src="carta-comida-1.jpeg" alt="Carta comida 1" class="menu-img">
+      <img src="carta-comida-2.jpeg" alt="Carta comida 2" class="menu-img">
+        <img src="cordero-estaca.jpeg" alt="Cordero a la estaca por encargo" class="menu-img">
+  <p style="text-align: center;">🔥 ¡Preparamos corderos a la estaca por encargo! 🔥</p>
     </section>
 
-    <section id="vinos">
+    <section id="vinos" data-aos="fade-up">
       <h2>🍷 Carta de vinos</h2>
-      <p><strong>Tintos:</strong> Rioja, Ribera del Duero</p>
-      <p><strong>Blancos:</strong> Albariño, Verdejo</p>
-      <p><strong>Espumosos:</strong> Cava, Sidra</p>
+      <img src="carta-vinos-1.jpeg" alt="Carta vinos 1" class="menu-img">
+      <img src="carta-vinos-2.jpeg" alt="Carta vinos 2" class="menu-img">
     </section>
 
-    <section id="galeria">
+    <section id="galeria" data-aos="zoom-in">
       <h2>📸 Galería</h2>
-      <img src="foto1.jpg" alt="Restaurante 1" width="100%">
-      <img src="foto2.jpg" alt="Restaurante 2" width="100%">
-    </section>
-
-    <section id="contacto">
-      <h2>📞 Contacto</h2>
-      <p>📍 Valle de Cuna y Cenera — MI-4, 3 – 33615 Mieres, Asturias</p>
-      <p>📞 Teléfono fijo: 984 569 122</p>
-      <p>📱 WhatsApp: 667 696 002</p>
-      <p>📸 Instagram: <a href="https://instagram.com/elmolin2.0" target="_blank">@elmolin2.0</a></p>
-      <button style="background-color: #F2C94C; padding: 10px; font-size: 16px;">Reservar</button>
+      <div class="galeria-grid">
+        <img src="foto1.jpeg" alt="Foto 1">
+        <img src="foto2.jpeg" alt="Foto 2">
+        <img src="foto4.jpeg" alt="Foto 4">
+        <img src="foto5.jpeg" alt="Foto 5">
+        <img src="foto6.jpeg" alt="Foto 6">
+        <img src="foto7.jpeg" alt="Foto 7">
+        <img src="foto8.jpeg" alt="Foto 8">
+      </div>
     </section>
   </main>
+
+  <!-- Lightbox para ampliar imágenes -->
+  <div id="lightbox" class="lightbox">
+    <span class="cerrar">&times;</span>
+    <img class="lightbox-img" id="img-ampliada">
+  </div>
+
+  <!-- Script Lightbox -->
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const imgAmpliada = document.getElementById("img-ampliada");
+    const cerrar = document.querySelector(".cerrar");
+
+    document.querySelectorAll("img").forEach(img => {
+      img.addEventListener("click", () => {
+        imgAmpliada.src = img.src;
+        lightbox.style.display = "flex";
+      });
+    });
+
+    cerrar.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+
+    lightbox.addEventListener("click", e => {
+      if (e.target === lightbox) lightbox.style.display = "none";
+    });
+  </script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
